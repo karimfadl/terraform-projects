@@ -1,0 +1,3 @@
+Amazon EC2 AMI Locator : https://cloud-images.ubuntu.com/locator/ec2/
+Learn DevOps: Infrastructure Automation With Terraform : https://www.udemy.com/course/learn-devops-infrastructure-automation-with-terraform/
+Amazon ECS-optimized AMIs : https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html

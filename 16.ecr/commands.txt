@@ -1,0 +1,11 @@
+terraform init
+terraform validate
+terraform plan -out terraform.tfplan
+terraform apply "terraform.tfplan"
+-------------------------------------------------------------------
+cd docker-demo
+docker build -t xxxxxxx.dkr.ecr.us-east-2.amazonaws.com/myapp:1 .
+aws ecr get-login
+docker push xxxxxxx.dkr.ecr.us-east-2.amazonaws.com/myapp:1
+-------------------------------------------------------------------
+terraform destroy
