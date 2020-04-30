@@ -1,0 +1,11 @@
+1.Build Image
+
+docker build -t jenkins:terraform .
+docker image ls
+
+2.Initialize Terraform
+terraform init
+terraform plan -out=tfplan
+terraform apply tfplan
+docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+terraform destroy -auto-approve

@@ -1,0 +1,5 @@
+terraform init
+terraform validate
+terraform plan -out=tfplan -var 'ext_port=8082'
+terraform apply tfplan
+terraform destroy -auto-approve -var 'ext_port=8082'

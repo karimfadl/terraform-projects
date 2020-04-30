@@ -1,0 +1,38 @@
+terraform init
+terraform validate
+
+#For dev env
+terraform plan -out=tfdev_plan -var env=dev
+terraform apply tfdev_plan
+
+#For prod env
+terraform plan -out=tfprod_plan -var env=prod
+terraform apply tfprod_plan
+
+terraform destroy
+-----------------------------------------------
+#Working With WorkSpace
+
+#Create a dev workspace:
+terraform workspace new dev
+#Plan the dev deployment:
+terraform plan -out=tfdev_plan -var env=dev
+#Apply the dev deployment:
+terraform apply tfdev_plan
+
+#Create a prod workspace:
+terraform workspace new prod
+#Plan the prod deployment:
+terraform plan -out=tfprod_plan -var env=prod
+#Apply the prod deployment
+terraform apply tfprod_plan
+
+#Select the dev workspace:
+terraform workspace select dev
+#Destroy the dev deployment
+terraform destroy -var env=dev
+
+#Select the prod workspace:
+terraform workspace select prod
+#Destroy the prod deployment
+terraform destroy -var env=prod
